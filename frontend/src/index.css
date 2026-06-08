@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background:   47 33% 97%;
+    --foreground:   30 10% 10%;
+    --card:         0 0% 100%;
+    --card-foreground: 30 10% 10%;
+    --popover:      0 0% 100%;
+    --popover-foreground: 30 10% 10%;
+    --primary:      153 41% 30%;
+    --primary-foreground: 0 0% 100%;
+    --secondary:    45 20% 94%;
+    --secondary-foreground: 30 10% 20%;
+    --muted:        45 20% 94%;
+    --muted-foreground: 30 8% 42%;
+    --accent:       153 41% 30%;
+    --accent-foreground: 0 0% 100%;
+    --destructive:  4 74% 47%;
+    --destructive-foreground: 0 0% 100%;
+    --border:       40 15% 87%;
+    --input:        40 15% 87%;
+    --ring:         153 41% 30%;
+    --radius:       0.625rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground font-sans antialiased; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-border rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-muted-foreground; }
+}
+
+@layer utilities {
+  .td-mono { font-family: theme('fontFamily.mono'); font-size: 0.75rem; }
+}

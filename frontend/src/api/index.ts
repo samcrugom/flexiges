@@ -54,6 +54,7 @@ export const maestrosApi = {
   delegaciones: () => get('/maestros/delegaciones'),
   familias:     () => get('/maestros/familias'),
   empresa:      () => get('/empresa'),
+  proveedores:      () => get('/proveedores'),
   updateEmpresa:(data: object) => put('/empresa', data),
 }
 
